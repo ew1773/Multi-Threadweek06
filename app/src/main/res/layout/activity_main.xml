@@ -16,5 +16,44 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:id="@+id/progressBar2"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:max="100"
+        android:progress="0" />
+
+    <Button
+        android:text="@string/ClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/LoadButton"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/ClearButton"
+        android:onClick="clearButton"
+        tools:ignore="RelativeOverlap" />
+
+    <Button
+        android:text="@string/LoadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LoadButton"
+        android:layout_alignBaseline="@+id/CreateButton"
+        android:layout_alignBottom="@+id/CreateButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="load" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainListView"
+        android:layout_below="@+id/progressBar2"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/ClearButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CreateButton"
+        android:text="@string/CreateButton"
+        android:onClick="create"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
